@@ -38,3 +38,5 @@ next-env.d.ts
 
 # others
 todo.md
+# Local Netlify folder
+.netlify
