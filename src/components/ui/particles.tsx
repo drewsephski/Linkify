@@ -79,15 +79,15 @@ const Particles: React.FC<ParticlesProps> = ({
         return () => {
             window.removeEventListener("resize", initCanvas);
         };
-    }, [color]);
+    }, [color, initCanvas, animate]);
 
     useEffect(() => {
         onMouseMove();
-    }, [mousePosition.x, mousePosition.y]);
+    }, [mousePosition.x, mousePosition.y, onMouseMove]);
 
     useEffect(() => {
         initCanvas();
-    }, [refresh]);
+    }, [refresh, initCanvas]);
 
     const initCanvas = () => {
         resizeCanvas();
