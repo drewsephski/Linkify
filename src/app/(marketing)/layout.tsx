@@ -1,5 +1,8 @@
 import React from 'react';
-import { Footer, Navbar } from "@/components";
+import dynamic from 'next/dynamic';
+
+const Navbar = dynamic(() => import("@/components/navigation/navbar"), { ssr: false });
+const Footer = dynamic(() => import("@/components/navigation/footer"), { ssr: false });
 
 interface Props {
     children: React.ReactNode
