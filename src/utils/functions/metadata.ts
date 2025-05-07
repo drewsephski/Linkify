@@ -43,6 +43,6 @@ export const generateMetadata = ({
         ...(image && { card: "summary_large_image", images: [image] }),
         creator: "@drewsephski",
     },
-    // metadataBase: new URL(process.env.APP_DOMAIN!),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_APP_DOMAIN ? `https://${process.env.NEXT_PUBLIC_APP_DOMAIN}` : "http://localhost:3000"),
     ...(noIndex && { robots: { index: false, follow: false } }),
 });
